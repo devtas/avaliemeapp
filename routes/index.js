@@ -33,4 +33,12 @@ router.get('/precos', function(req, res) {
   });
 });
 
+/* GET contato. */
+router.get('/contato', function(req, res) {
+  res.render('contact', {
+    title: 'Contato',
+    page: 'contact'
+  });
+});
+
 module.exports = router;

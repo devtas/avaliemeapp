@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  section
+    .container.text-center
+      h1.semibold.white.mb-20.mt-0 Fale o que pensa, ouviremos com prazer!
+
+  section.bg-white.contact
+    .container.text-center
+      h2.mt-0 Contato
+
+      .row.mt-40
+        .col-xs-12.col-md-3
+        .col-xs-12.col-md-6
+          form(role="form")
+            .form-group
+              input.form-control(type="text", placeholder="Seu nome")
+            .form-group
+              input.form-control(type="email", placeholder="Seu e-mail")
+            .form-group
+              input.form-control(type="text", placeholder="Assunto")
+            .form-group
+              textarea.form-control(rows="3", placeholder="Mensagem")
+            button.btn.btn-default.pull-right(type="submit") Enviar
+        .col-xs-12.col-md-3

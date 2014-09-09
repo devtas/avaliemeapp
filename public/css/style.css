@@ -87,7 +87,31 @@ header nav a {
 footer {
   background: #1c1f26;
   color: #737373;
+  font-size: 15px;
   padding: 60px 0;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li.title {
+  color: #ff7e00;
+  font-size: 16px;
+}
+
+footer .logo-footer {
+  opacity: 0.5;
+}
+
+@media(max-width: 640px) {
+  footer .app-footer {
+    margin-bottom: 30px;
+    margin-top: 0 !important;
+  }
+  footer .app-footer, footer .app-footer p {
+    text-align: center;
+  }
 }
 
 section {
@@ -131,4 +155,17 @@ section.inteligente p {
   font-size: 24px;
   margin: 0 auto;
   width: 400px;
+}
+
+.recommend-plan {
+  background: #ff7e00;
+  color: #ffffff;
+}
+
+.recommend-plan p {
+  color: #ffffff;
+}
+
+.recommend-plan ul {
+  color: #737373;
 }
