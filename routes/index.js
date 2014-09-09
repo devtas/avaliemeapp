@@ -20,8 +20,16 @@ router.get('/sobre', function(req, res) {
 /* GET depoimentos. */
 router.get('/depoimentos', function(req, res) {
   res.render('testimonials', {
-  	title: 'Depoimentos',
-  	page: 'testimonials'
+    title: 'Depoimentos',
+    page: 'testimonials'
+  });
+});
+
+/* GET preços. */
+router.get('/precos', function(req, res) {
+  res.render('price', {
+    title: 'Preços',
+    page: 'price'
   });
 });
 

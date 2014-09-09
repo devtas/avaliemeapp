@@ -1,10 +1,29 @@
 extends layout
 
 block content
-  section.bg-white.about(style="height: 1000px")
+  section
+    .container.text-center
+      //h1.semibold.white AVALIE.ME = AGILIDADE, FACILIDADE E ECONOMIA.
+      h1.semibold.white.mb-20.mt-0 Agilidade, facilidade e economia.
+
+      .btn.btn-lg.btn-free-test.mt-20.mb-10 COMEÇE AGORA E TESTE GRÁTIS
+
+
+  section.bg-white.about
     .container
       .row
-        .col-xs-12.text-center
-          h2.mt-0 Sobre
+        .col-xs-12.col-md-1
+        .col-xs-12.col-md-10.text-center
+          h2.mt-0 O App
 
-          p.mt-40.text-center asdaosdfnashdjfnakdhnfakhnfkahjdnfakdhnfkashnfkahf.
+          p.mt-40.text-center
+            | Avalie-me é um mostruário totalmente online para
+            br.visible-lg
+            | aprovação dos jobs e trabalhos desenvolvidos.
+            br
+            | Serviço voltado para freelancers e profissionais autônomos, aumentando assim o profissionalismo e a praticidade no processo de aprovação do trabalho.
+        
+        .col-xs-12.col-md-1
+
+        .col-xs-12.text-center.mt-50
+          img(src="/img/logo-color.png", border="0", width="200")
