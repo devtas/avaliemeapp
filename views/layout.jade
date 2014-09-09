@@ -1,0 +1,39 @@
+doctype html
+html(ng-app='roadapps-site')
+  head
+    title= title
+    link(rel="stylesheet", href="/fonts/stylesheet.css")
+    link(rel="stylesheet", href="/css/geral.min.css")
+    link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/style.css")
+
+  body
+    header
+      .container
+        .row
+          .col-xs-3
+            a(href="/")
+              img(src="/img/logo-white.png", border="0")
+          .col-xs-6
+            nav.pull-right
+              ul.nav.nav-pills
+                li(class="ng-class: page == 'home'? 'active': 'normal'")
+                  a(href="/") Home
+                li
+                  a(href="/sobre") Sobre
+                li 
+                  a(href="/depoimentos") Depoimentos
+                li 
+                  a(href="/precos") Preços
+                li 
+                  a(href="/contato") Contato
+
+          .col-xs-3.text-right
+            a(href="http://avaliemeapp.com/app", target="_blank")
+              .btn.btn-transparent.mr-10 LOGIN
+            .btn.btn-default COMEÇE AQUI
+
+    block content
+
+    footer
+      //.container Footer
