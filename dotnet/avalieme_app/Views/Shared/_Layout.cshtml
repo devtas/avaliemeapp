@@ -5,7 +5,13 @@
         <title>@ViewBag.Title - Avalie-me.com</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
+
+        <!-- CSS -->
+        @Styles.Render("~/Content/fonts/stylesheet.css")
+        @Styles.Render("~/Content/bootstrap/css/bootstrap.min.css")
+        @Styles.Render("~/Content/css/style.css")
+        <!-- CSS -->
+
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
@@ -41,8 +47,9 @@
                 </div>
             </div>
         </footer>
-
-        @Scripts.Render("~/bundles/jquery")
+        
+        @Scripts.Render("~/bundles/bootstrap/js/bootstrap.min.js")
+        @Scripts.Render("~/Content/")
         @RenderSection("scripts", required: false)
     </body>
 </html>
