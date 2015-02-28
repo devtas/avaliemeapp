@@ -42,12 +42,17 @@
                 </div>
             </div>
         </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            
-            @*<section class="content-wrapper main-content clear-fix">*@
+        <div class="app-view row">
+            <div class="col-xs-12 col-sm-2 app-nav">
+                <ul class="nav">
+                    <li class=""><a href="#">Dashboard</a></li>
+                    <li class=""><a href="#">Jobs</a></li>
+                    <li class=""><a href="#">Clientes</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-10 app-content">
                 @RenderBody()
-            @*</section>*@
+            </div>
         </div>
         <footer>
             <div class="container-fluid"></div>
