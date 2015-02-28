@@ -32,13 +32,18 @@ header {
 }
 
 header nav a {
-  color: #ffffff;
-  text-transform: uppercase;
+    color: #ffffff;
+    text-transform: uppercase;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: transparent;
+  color: #ff7e00;
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
@@ -102,11 +107,17 @@ footer ul li.title {
 }
 
 footer ul li a {
-  color: #737373;
+    color: #737373;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 footer ul li a:hover {
   color: #ff7e00;
+  text-decoration: none;
 }
 
 footer .logo-footer {

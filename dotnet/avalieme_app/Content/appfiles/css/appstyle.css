@@ -102,18 +102,23 @@ footer {
     list-style: none;
 }
 
-.app-nav ul.nav li:hover {
-    background: #d3d3d3;
-}
-
 .app-nav ul.nav li a {
     color: #7b7b7b;
     padding: 19px;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .app-nav ul.nav li a:hover {
-    background: none;
+    background: #d3d3d3;
     color: #7b7b7b;
+}
+
+.app-nav ul.nav li a img {
+    margin-right: 10px;
 }
 
 .app-content {

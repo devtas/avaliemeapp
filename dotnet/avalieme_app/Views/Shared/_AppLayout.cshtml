@@ -28,6 +28,7 @@
                             <font>
                                 @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
                                     <span style="text-transform: capitalize;" class="white">@Html.Label(User.Identity.Name)</span>
+                                    
                                     @Html.ActionLink("Configurações /", "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "config light-blue", title = "Configurações" })
                                     @Html.AntiForgeryToken()
                                     <a href="javascript:document.getElementById('logoutForm').submit()" class="light-blue">Sair</a>
@@ -45,9 +46,21 @@
         <div class="app-view row">
             <div class="col-xs-12 col-sm-2 app-nav">
                 <ul class="nav">
-                    <li class=""><a href="#">Dashboard</a></li>
-                    <li class=""><a href="#">Jobs</a></li>
-                    <li class=""><a href="#">Clientes</a></li>
+                    <li class="">
+                        <a href="/App/Dashboard">
+                            <img src="~/Content/appfiles/img/dashboard-ico.png" border="0" />Dashboard
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/App/Jobs">
+                            <img src="~/Content/appfiles/img/jobs-ico.png" border="0" />Jobs
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/App/Clients">
+                            <img src="~/Content/appfiles/img/clientes-ico.png" border="0" />Clientes
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-10 app-content">
@@ -58,8 +71,8 @@
             <div class="container-fluid"></div>
         </footer>
         
-        @Scripts.Render("~/bundles/bootstrap/js/bootstrap.min.js")
-        @Scripts.Render("~/Content/")
+        @*@Scripts.Render("~/Content/appfiles/bootstrap/js/bootstrap.min.js")*@
+        @Scripts.Render("~/Content/appfiles/js/angular1.3.9.min.js")
         @RenderSection("scripts", required: false)
     </body>
 </html>

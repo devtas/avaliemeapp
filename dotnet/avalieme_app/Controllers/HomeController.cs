@@ -22,9 +22,16 @@ namespace avalieme_app.Controllers
             return View();
         }
 
-        public ActionResult ComoFunciona()
+        public ActionResult Depoimentos()
         {
-            ViewBag.Message = "Your app how it works page.";
+            ViewBag.Message = "Your app testimonials page.";
+            ViewBag.Page = "active";
+            return View();
+        }
+
+        public ActionResult Price()
+        {
+            ViewBag.Message = "Your app price page.";
             ViewBag.Page = "active";
             return View();
         }

@@ -186,6 +186,8 @@
     <Content Include="Content\appfiles\fonts\opensans-semibold-webfont.svg" />
     <Content Include="Content\appfiles\fonts\stylesheet.css" />
     <Content Include="Content\appfiles\img\logo-negative-300.png" />
+    <Content Include="Content\appfiles\js\angular1.3.9.js" />
+    <Content Include="Content\appfiles\js\angular1.3.9.min.js" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\css\bootstrap.css" />
@@ -324,6 +326,7 @@
     <Content Include="Content\appfiles\fonts\opensans-semibold-webfont.eot" />
     <Content Include="Content\appfiles\fonts\opensans-semibold-webfont.ttf" />
     <Content Include="Content\appfiles\fonts\opensans-semibold-webfont.woff" />
+    <Content Include="Content\appfiles\js\angular.min.js.map" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -379,9 +382,13 @@
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_SiteLayout.cshtml" />
-    <Content Include="Views\Home\Como-Funciona.cshtml" />
     <Content Include="Views\App\Index.cshtml" />
     <Content Include="Views\Shared\_AppLayout.cshtml" />
+    <Content Include="Views\App\Dashboard.cshtml" />
+    <Content Include="Views\App\Jobs.cshtml" />
+    <Content Include="Views\App\Clients.cshtml" />
+    <Content Include="Views\Home\Depoimentos.cshtml" />
+    <Content Include="Views\Home\Price.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
