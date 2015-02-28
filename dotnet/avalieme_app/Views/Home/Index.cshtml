@@ -1,45 +1,77 @@
 ﻿@{
     ViewBag.Title = "You are the show!";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
 }
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit
-                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-                If you have any questions about ASP.NET MVC visit
-                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
-            </p>
+
+    <div class="container home text-center">
+        <div class="home-call">
+            <h1 class="mb-5 pull-left">Chega de enviar seus trabalhos</h1>
+            <img src="~/Content/sitefiles/img/como-anexo.png" border="0" alt="Como anexo" class="pull-right mr-30"/>
+            <h1 class="mt-15 pull-right">para os clientes...</h1>
+        </div>
+        @Html.ActionLink("COMEÇE AGORA E TESTE GRÁTIS", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-lg btn-free-test mt-20 mb-90" })
+    </div>
+    <section class="avaliacao">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-5">
+                    <img src="~/Content/sitefiles/img/icon-avaliacao.png" border="0" class="pull-right"/>
+                </div>
+                <div class="col-xs-7">
+                    <h2 class="mt-0">Facilita a avaliação</h2>
+                    <p>Cada job terá uma página própria <br class="visible-lg"/>e única para avaliação.</p>
+                </div>
+            </div>
         </div>
     </section>
-}
-<h3>We suggest the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
-    </li>
-
-    <li class="two">
-        <h5>Add NuGet packages and jump-start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
-    </li>
-
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
-    </li>
-</ol>
+    <section class="valoriza">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-5">
+                    <img src="~/Content/sitefiles/img/diamond.png" border="0" class="pull-right mr-30"/>
+                </div>
+                <div class="col-xs-7">
+                    <h2 class="mt-0">Valoriza o seu trabalho</h2>
+                    <p>Agrega mais profissionalismo ao seu <br class="visible-lg"/>job que já está perfeito!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="inteligente">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-5">
+                    <img src="~/Content/sitefiles/img/!mail.png" border="0" class="pull-right mr-40"/>
+                </div>
+                <div class="col-xs-7">
+                    <h2 class="mt-0">Inteligente</h2>
+                    <p>A cada ação relacionada ao Job, você<br class="visible-lg"/>recebe notificações por e-mail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="como-funciona bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h2 class="mt-0">Como funciona</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <ol class="funciona-steps light mt-30 mb-20">
+                        <li>Adicione um job;</li>
+                        <li>Adicione um cliente;</li>
+                        <li>Monte a proposta para o cliente;</li>
+                        <li>Envie a proposta;</li>
+                        <li>Aguarde a aprovação!</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="btn btn-lg btn-free-test mt-20 mb-40">EXPERIMENTE GRÁTIS</div>
+                </div>
+            </div>
+        </div>
+    </section>

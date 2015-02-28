@@ -22,6 +22,13 @@ namespace avalieme_app.Controllers
             return View();
         }
 
+        public ActionResult ComoFunciona()
+        {
+            ViewBag.Message = "Your app how it works page.";
+
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

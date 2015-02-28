@@ -7,8 +7,6 @@
         }
     </text>
 } else {
-    <ul>
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
+    @Html.ActionLink("LOGIN", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-transparent mr-10" })
+    @Html.ActionLink("Comece Grátis", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-default" })
 }

@@ -7,7 +7,7 @@
 	<div class="page-login">
 		<div class="form login-form">
 			<header>
-				<img src="~/Content/img/avali-me-logo-53x53.png" border="0" />
+				<a href="/"><img src="~/Content/img/avali-me-logo-53x53.png" border="0" /></a>
 				@ViewBag.Title <span class="regular">Avalie-me</span>
 			</header>
             
@@ -16,22 +16,22 @@
                 @Html.AntiForgeryToken()
                 @Html.ValidationSummary(true)
 
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName, new { @placeholder = "E-mail ou Username" })
                 @Html.ValidationMessageFor(m => m.UserName)
 
-                @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @placeholder = "Senha" })
                 @Html.ValidationMessageFor(m => m.Password)
-
+                
+                @*
                 @Html.CheckBoxFor(m => m.RememberMe)
                 @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
-
+                *@
+                
   				<button type="submit" class="btn btn-default btn-block btn-login">Login</button>
                 
   				<div class="more-options row">
   					<div class="col-xs-6">
-  						<a href="forgot.html">Esqueceu a sua senha?</a>
+  						@Html.ActionLink("Esqueci a minha senha?", "Manage")
   					</div>
   					<div class="col-xs-6 text-right">
   						Não tem conta? @Html.ActionLink("Comece Grátis", "Register")
@@ -41,13 +41,10 @@
 		</div>
 	</div>
 
-<section id="loginForm">
-</section>
-
-<section class="social" id="socialLoginForm">
+@*<section class="social" id="socialLoginForm">
     <h2>Use another service to log in.</h2>
     @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
-</section>
+</section>*@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

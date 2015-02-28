@@ -1,36 +1,36 @@
 ﻿@model avalieme_app.Models.RegisterModel
+
 @{
     ViewBag.Title = "Register";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>Create a new account.</h2>
-</hgroup>
+	<div class="page-login">
+		<div class="form signup-form">
+			<header>
+				<a href="/"><img src="~/Content/img/avali-me-logo-53x53.png" border="0" /></a>
+				Crie sua conta <span class="regular">Avalie.me</span> e começe grátis!
+			</header>
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary()
+            @using (Html.BeginForm()) {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary()
 
-    <fieldset>
-        <legend>Registration Form</legend>
-        <ol>
-            <li>
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.ConfirmPassword)
-                @Html.PasswordFor(m => m.ConfirmPassword)
-            </li>
-        </ol>
-        <input type="submit" value="Register" />
-    </fieldset>
-}
+                @Html.TextBoxFor(m => m.UserName, new { @placeholder = "Username" })
+
+                @Html.PasswordFor(m => m.Password, new { @placeholder = "Senha" })
+
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @placeholder = "Confirme a Senha" })
+
+  				<input type="submit" value="Começar Grátis" class="btn btn-default btn-block btn-login">
+                
+  				<div class="more-options row">
+  					<div class="col-xs-12">
+  						Clicando em “Começar Grátis”, você está automaticamente aceitando os <a href="#" class="orange">“Termos de Uso”</a>.
+  					</div>
+  				</div>
+            }
+		</div>
+	</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

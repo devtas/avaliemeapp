@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Avalie-me.com</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+
+        <!-- CSS -->
+        @Styles.Render("~/Content/sitefiles/fonts/stylesheet.css")
+        @Styles.Render("~/Content/sitefiles/css/geral.min.css")
+        @Styles.Render("~/Content/sitefiles/bootstrap/css/bootstrap.min.css")
+        @Styles.Render("~/Content/sitefiles/css/style.css")
+        <!-- CSS -->
+
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <header>
+            <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="/"><img src="~/Content/sitefiles/img/logo-white.png" border="0"/></a>
+                </div>
+                <div class="col-xs-6">
+                    <nav class="pull-right">
+                    <ul class="nav nav-pills">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Como funciona", "ComoFunciona", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-3 text-right">
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 mt-20 app-footer"><img src="~/Content/sitefiles/img/logo-white.png" border="0" class="logo-footer"/>
+                    <p class="mt-10 mb-0">Tel.: 11 0 0000.0000</p>
+                    <p title="contato@avaliemeapp.com" class="mp-0">contato at avaliemeapp dot com</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-4">
+                    <ul>
+                        <li class="title">Institucional</li>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Como funciona", "ComoFunciona", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-4">
+                    <ul>
+                        <li class="title">Aplicação</li>
+                        <li>@Html.ActionLink("LOGIN", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                        <li>@Html.ActionLink("Comece Grátis", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+        @Scripts.Render("~/bundles/bootstrap/js/bootstrap.min.js")
+        @Scripts.Render("~/Content/")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
