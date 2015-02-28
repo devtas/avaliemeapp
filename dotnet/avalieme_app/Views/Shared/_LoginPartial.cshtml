@@ -1,12 +1,14 @@
 ﻿@if (Request.IsAuthenticated) {
-    <text>
-        Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+    <font class="white">
+        Olá, @Html.Label(User.Identity.Name)!
+        @*@Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })*@
         @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.ActionLink("Acessar Painel", "Index", "App", routeValues: null, htmlAttributes: new { @class = "btn-xs btn-default mr-10", title = "App" })
             @Html.AntiForgeryToken()
-            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+             <a href="javascript:document.getElementById('logoutForm').submit()">Sair</a>
         }
-    </text>
+    </font>
 } else {
-    @Html.ActionLink("LOGIN", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-transparent mr-10" })
+    @Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-transparent mr-10" })
     @Html.ActionLink("Comece Grátis", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-default" })
 }

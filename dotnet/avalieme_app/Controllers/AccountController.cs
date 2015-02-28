@@ -17,6 +17,12 @@ namespace avalieme_app.Controllers
     [InitializeSimpleMembership]
     public class AccountController : Controller
     {
+
+        public ActionResult Index()
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
         //
         // GET: /Account/Login
 
@@ -37,7 +43,8 @@ namespace avalieme_app.Controllers
         {
             if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
             {
-                return RedirectToLocal(returnUrl);
+                //return RedirectToLocal(returnUrl);
+                return RedirectToApp(returnUrl);
             }
 
             // If we got this far, something failed, redisplay form
@@ -339,6 +346,18 @@ namespace avalieme_app.Controllers
             else
             {
                 return RedirectToAction("Index", "Home");
+            }
+        }
+
+        private ActionResult RedirectToApp(string returnUrl)
+        {
+            if (Url.IsLocalUrl(returnUrl))
+            {
+                return Redirect(returnUrl);
+            }
+            else
+            {
+                return RedirectToAction("Index", "App");
             }
         }
 

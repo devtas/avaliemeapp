@@ -11,28 +11,28 @@ namespace avalieme_app.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
+            ViewBag.Page = "active";
             return View();
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
-
+            ViewBag.Page = "active";
             return View();
         }
 
         public ActionResult ComoFunciona()
         {
             ViewBag.Message = "Your app how it works page.";
-
+            ViewBag.Page = "active";
             return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            ViewBag.Page = "active";
             return View();
         }
     }

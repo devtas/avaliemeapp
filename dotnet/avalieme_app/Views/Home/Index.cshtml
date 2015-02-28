@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "You are the show!";
+    ViewBag.Title = "Chega de enviar seus trabalhos como anexo para os clientes!";
     Layout = "~/Views/Shared/_SiteLayout.cshtml";
 }
 
@@ -9,7 +9,7 @@
             <img src="~/Content/sitefiles/img/como-anexo.png" border="0" alt="Como anexo" class="pull-right mr-30"/>
             <h1 class="mt-15 pull-right">para os clientes...</h1>
         </div>
-        @Html.ActionLink("COMEÇE AGORA E TESTE GRÁTIS", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-lg btn-free-test mt-20 mb-90" })
+        @Html.ActionLink("COMECE AGORA E TESTE GRÁTIS", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-lg semibold btn-free-test mt-20 mb-90" })
     </div>
     <section class="avaliacao">
         <div class="container">
@@ -70,7 +70,11 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <div class="btn btn-lg btn-free-test mt-20 mb-40">EXPERIMENTE GRÁTIS</div>
+                    <br /><br />
+                    Não é necessário Cartão de Crédito.    
+                </div>
+                <div class="col-xs-12 text-center">
+                    @Html.ActionLink("EXPERIMENTE GRÁTIS", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-lg semibold btn-free-test mt-20 mb-40" })
                 </div>
             </div>
         </div>

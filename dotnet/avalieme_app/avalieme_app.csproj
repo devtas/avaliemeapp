@@ -162,6 +162,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -171,6 +172,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\appfiles\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\appfiles\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\appfiles\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\appfiles\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\appfiles\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\appfiles\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\appfiles\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\appfiles\css\geral.min.css" />
+    <Content Include="Content\appfiles\css\appstyle.css" />
+    <Content Include="Content\appfiles\fonts\opensans-light-webfont.svg" />
+    <Content Include="Content\appfiles\fonts\opensans-regular-webfont.svg" />
+    <Content Include="Content\appfiles\fonts\opensans-semibold-webfont.svg" />
+    <Content Include="Content\appfiles\fonts\stylesheet.css" />
+    <Content Include="Content\appfiles\img\logo-negative-300.png" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\css\bootstrap.css" />
@@ -184,6 +199,8 @@
     <Content Include="Content\fonts\opensans-regular-webfont.svg" />
     <Content Include="Content\fonts\stylesheet.css" />
     <Content Include="Content\img\avali-me-logo-53x53.png" />
+    <Content Include="Content\img\bg-login-2.jpg" />
+    <Content Include="Content\img\bg-office.jpg" />
     <Content Include="Content\img\bg_login.jpg" />
     <Content Include="Content\sitefiles\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Content\sitefiles\bootstrap\css\bootstrap-theme.min.css" />
@@ -193,7 +210,7 @@
     <Content Include="Content\sitefiles\bootstrap\js\bootstrap.js" />
     <Content Include="Content\sitefiles\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\sitefiles\css\geral.min.css" />
-    <Content Include="Content\sitefiles\css\style.css" />
+    <Content Include="Content\sitefiles\css\sitestyle.css" />
     <Content Include="Content\sitefiles\fonts\opensans-light-webfont.svg" />
     <Content Include="Content\sitefiles\fonts\opensans-regular-webfont.svg" />
     <Content Include="Content\sitefiles\fonts\opensans-semibold-webfont.svg" />
@@ -201,6 +218,7 @@
     <Content Include="Content\sitefiles\img\!mail.png" />
     <Content Include="Content\sitefiles\img\bg-man-blur.jpg" />
     <Content Include="Content\sitefiles\img\bg-man.jpg" />
+    <Content Include="Content\sitefiles\img\bg-office.jpg" />
     <Content Include="Content\sitefiles\img\como-anexo.png" />
     <Content Include="Content\sitefiles\img\diamond.png" />
     <Content Include="Content\sitefiles\img\favicon.png" />
@@ -261,6 +279,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon-avalieme.ico" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\bootstrap\css\bootstrap-theme.css.map" />
@@ -291,6 +310,20 @@
     <Content Include="Content\sitefiles\fonts\opensans-semibold-webfont.eot" />
     <Content Include="Content\sitefiles\fonts\opensans-semibold-webfont.ttf" />
     <Content Include="Content\sitefiles\fonts\opensans-semibold-webfont.woff" />
+    <Content Include="Content\appfiles\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Content\appfiles\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\appfiles\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\appfiles\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\appfiles\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\appfiles\fonts\opensans-light-webfont.eot" />
+    <Content Include="Content\appfiles\fonts\opensans-light-webfont.ttf" />
+    <Content Include="Content\appfiles\fonts\opensans-light-webfont.woff" />
+    <Content Include="Content\appfiles\fonts\opensans-regular-webfont.eot" />
+    <Content Include="Content\appfiles\fonts\opensans-regular-webfont.ttf" />
+    <Content Include="Content\appfiles\fonts\opensans-regular-webfont.woff" />
+    <Content Include="Content\appfiles\fonts\opensans-semibold-webfont.eot" />
+    <Content Include="Content\appfiles\fonts\opensans-semibold-webfont.ttf" />
+    <Content Include="Content\appfiles\fonts\opensans-semibold-webfont.woff" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -343,10 +376,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_AppLayout.cshtml" />
+    <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_SiteLayout.cshtml" />
     <Content Include="Views\Home\Como-Funciona.cshtml" />
+    <Content Include="Views\App\Index.cshtml" />
+    <Content Include="Views\Shared\_AppLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -358,6 +393,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon-avalieme.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

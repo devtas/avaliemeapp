@@ -2,26 +2,56 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - Avalie-me.com</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <title>@ViewBag.Title | Avalie-me.com</title>
+        <link href="~/favicon-avalieme.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
 
         <!-- CSS -->
-        @Styles.Render("~/Content/fonts/stylesheet.css")
-        @Styles.Render("~/Content/bootstrap/css/bootstrap.min.css")
-        @Styles.Render("~/Content/css/style.css")
+        @Styles.Render("~/Content/appfiles/fonts/stylesheet.css")
+        @Styles.Render("~/Content/appfiles/css/geral.min.css")
+        @Styles.Render("~/Content/appfiles/bootstrap/css/bootstrap.min.css")
+        @Styles.Render("~/Content/appfiles/css/appstyle.css")
         <!-- CSS -->
 
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <a href="/App"><img src="~/Content/appfiles/img/logo-negative-300.png" border="0" width="76" /></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 text-right white">
 
+                        @if (Request.IsAuthenticated) {
+                            <font>
+                                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+                                    <span style="text-transform: capitalize;" class="white">@Html.Label(User.Identity.Name)</span>
+                                    @Html.ActionLink("Configurações /", "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "config light-blue", title = "Configurações" })
+                                    @Html.AntiForgeryToken()
+                                    <a href="javascript:document.getElementById('logoutForm').submit()" class="light-blue">Sair</a>
+                                }
+                            </font>
+                        } else {
+                            @Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-transparent mr-10" })
+                            @Html.ActionLink("Comece Grátis", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-default" })
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </header>
         <div id="body">
             @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
+            
+            @*<section class="content-wrapper main-content clear-fix">*@
                 @RenderBody()
-            </section>
+            @*</section>*@
         </div>
+        <footer>
+            <div class="container-fluid"></div>
+        </footer>
         
         @Scripts.Render("~/bundles/bootstrap/js/bootstrap.min.js")
         @Scripts.Render("~/Content/")
